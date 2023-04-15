@@ -1,18 +1,20 @@
-//your JS code here. If required.
 let input = prompt("Enter a string");
 let n = input.length;
-let count=1;
+let count=true;
 let ans = '';
 for(let i=0;i<n;i++){
-		let currentCharaceter = input.charAt(i);
-	    count=1;
-	    for(let j=0;j<n;j++){
-	        if(currentCharaceter == input.charAt(j))
-	        count++;
-	    }
-	    if(count==1){
-	    ans+=currentCharaceter;
-	    break;
-	}
+	let currentCharaceter = input.charAt(i);
+    count=true;
+    for(let j=0;j<n;j++){
+        if(i==j)
+        continue;
+        else if(currentCharaceter == input.charAt(j))
+        count = false;
+    }
+
+    if(count){
+        ans+=currentCharaceter;
+        break;
+    }
 }
 alert(ans);
