@@ -1,7 +1,7 @@
 let input = prompt("Enter a string");
 let n = input.length;
 let count=true;
-let ans = '';
+let ans = null;
 for(let i=0;i<n;i++){
 	let currentCharaceter = input.charAt(i);
     count=true;
@@ -13,6 +13,7 @@ for(let i=0;i<n;i++){
     }
 
     if(count){
+		ans='';
         ans+=currentCharaceter;
         break;
     }
